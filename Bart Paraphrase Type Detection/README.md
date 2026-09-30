@@ -67,7 +67,7 @@ pip install optuna
 ### File Structure:
 
 ```
-├── 4_Bart_Paraphrase_Type_Detection.pdf
+├── 4_Bart_Paraphrase_Type_Detection_AI_Usage_Card.pdf
 │   (AI Usage Card for the BART Paraphrase Type Detection Task)
 │
 ├── analysis/
