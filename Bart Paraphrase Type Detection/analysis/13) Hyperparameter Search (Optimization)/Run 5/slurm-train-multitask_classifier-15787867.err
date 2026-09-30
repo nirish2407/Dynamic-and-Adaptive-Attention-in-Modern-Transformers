@@ -1,0 +1,13 @@
+[I 2026-09-08 13:24:20,952] A new study created in RDB with name: bart_etpc_search_5
+[I 2026-09-08 15:15:02,196] Trial 0 finished with value: 0.268 and parameters: {'learning_rate': 1.737021634565213e-05, 'dropout': 0.22933902174189658}. Best is trial 0 with value: 0.268.
+[I 2026-09-08 17:32:14,628] Trial 1 finished with value: 0.217 and parameters: {'learning_rate': 4.8650821921205694e-05, 'dropout': 0.3296775453513757}. Best is trial 0 with value: 0.268.
+[I 2026-09-08 20:00:51,768] Trial 2 finished with value: 0.261 and parameters: {'learning_rate': 2.381495776814973e-05, 'dropout': 0.14076097639522567}. Best is trial 0 with value: 0.268.
+[I 2026-09-08 22:31:53,731] Trial 3 finished with value: 0.233 and parameters: {'learning_rate': 3.879008803924832e-05, 'dropout': 0.3684725001877972}. Best is trial 0 with value: 0.268.
+[I 2026-09-09 01:00:17,963] Trial 4 finished with value: 0.24 and parameters: {'learning_rate': 1.2125891932014711e-05, 'dropout': 0.36805736722079974}. Best is trial 0 with value: 0.268.
+[I 2026-09-09 02:12:42,258] Trial 5 finished with value: 0.234 and parameters: {'learning_rate': 1.371958885746948e-05, 'dropout': 0.1263472735932242}. Best is trial 0 with value: 0.268.
+[I 2026-09-09 04:28:58,527] Trial 6 finished with value: 0.244 and parameters: {'learning_rate': 4.4824698052877434e-05, 'dropout': 0.14081353293107687}. Best is trial 0 with value: 0.268.
+[I 2026-09-09 06:45:49,406] Trial 7 finished with value: 0.259 and parameters: {'learning_rate': 1.8402795652540487e-05, 'dropout': 0.2105285588390351}. Best is trial 0 with value: 0.268.
+[I 2026-09-09 08:36:49,129] Trial 8 finished with value: 0.278 and parameters: {'learning_rate': 2.5915716767633834e-05, 'dropout': 0.19544654532520622}. Best is trial 8 with value: 0.278.
+[I 2026-09-09 10:27:45,671] Trial 9 finished with value: 0.208 and parameters: {'learning_rate': 9.825757441128734e-06, 'dropout': 0.33719161405687426}. Best is trial 8 with value: 0.278.
+[I 2026-09-09 11:39:05,717] Trial 10 finished with value: 0.184 and parameters: {'learning_rate': 5.173042169238303e-06, 'dropout': 0.2603589135549662}. Best is trial 8 with value: 0.278.
+[I 2026-09-09 13:55:21,518] Trial 11 finished with value: 0.272 and parameters: {'learning_rate': 2.640327694445439e-05, 'dropout': 0.23010338612707992}. Best is trial 8 with value: 0.278.

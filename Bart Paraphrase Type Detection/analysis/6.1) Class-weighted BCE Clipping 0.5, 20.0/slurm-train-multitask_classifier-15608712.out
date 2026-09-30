@@ -1,0 +1,181 @@
+Submitting job with sbatch from directory: /mnt/vast-nhr/home/nirish.samant/u28445/dnlp
+Home directory: /user/nirish.samant/u28445
+Working directory: /mnt/vast-nhr/home/nirish.samant/u28445/dnlp
+Current node: ggpu124
+Python 3.10.20
+Collecting environment information...
+PyTorch version: 2.2.0
+Is debug build: False
+CUDA used to build PyTorch: 12.1
+ROCM used to build PyTorch: N/A
+
+OS: Rocky Linux 8.10 (Green Obsidian) (x86_64)
+GCC version: (GCC) 8.5.0 20210514 (Red Hat 8.5.0-28)
+Clang version: Could not collect
+CMake version: version 3.26.5
+Libc version: glibc-2.28
+
+Python version: 3.10.20 | packaged by conda-forge | (main, Jun 11 2026, 03:31:56) [GCC 14.3.0] (64-bit runtime)
+Python platform: Linux-4.18.0-553.151.1.el8_10.x86_64-x86_64-with-glibc2.28
+Is CUDA available: True
+CUDA runtime version: Could not collect
+CUDA_MODULE_LOADING set to: LAZY
+GPU models and configuration: GPU 0: NVIDIA A100-SXM4-40GB
+Nvidia driver version: 570.211.01
+cuDNN version: Could not collect
+HIP runtime version: N/A
+MIOpen runtime version: N/A
+Is XNNPACK available: True
+
+CPU:
+Architecture:        x86_64
+CPU op-mode(s):      32-bit, 64-bit
+Byte Order:          Little Endian
+CPU(s):              128
+On-line CPU(s) list: 0-127
+Thread(s) per core:  2
+Core(s) per socket:  32
+Socket(s):           2
+NUMA node(s):        2
+Vendor ID:           AuthenticAMD
+CPU family:          25
+Model:               1
+Model name:          AMD EPYC 7513 32-Core Processor
+Stepping:            1
+CPU MHz:             2600.000
+CPU max MHz:         3681.6399
+CPU min MHz:         1500.0000
+BogoMIPS:            5200.16
+Virtualization:      AMD-V
+L1d cache:           32K
+L1i cache:           32K
+L2 cache:            512K
+L3 cache:            32768K
+NUMA node0 CPU(s):   0-31,64-95
+NUMA node1 CPU(s):   32-63,96-127
+Flags:               fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl nonstop_tsc cpuid extd_apicid aperfmperf pni pclmulqdq monitor ssse3 fma cx16 pcid sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 invpcid_single hw_pstate ssbd mba ibrs ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local clzero irperf xsaveerptr wbnoinvd amd_ppin brs arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold v_vmsave_vmload vgif v_spec_ctrl umip pku ospke vaes vpclmulqdq rdpid overflow_recov succor smca fsrm
+
+Versions of relevant libraries:
+[pip3] numpy==1.26.4
+[pip3] torch==2.2.0
+[pip3] torchaudio==2.2.0
+[pip3] torchvision==0.17.0
+[pip3] triton==2.2.0
+[conda] blas                      2.108                       mkl    conda-forge
+[conda] blas-devel                3.9.0                     8_mkl    conda-forge
+[conda] libblas                   3.9.0                     8_mkl    conda-forge
+[conda] libcblas                  3.9.0                     8_mkl    conda-forge
+[conda] liblapack                 3.9.0                     8_mkl    conda-forge
+[conda] liblapacke                3.9.0                     8_mkl    conda-forge
+[conda] libopenvino-pytorch-frontend 2026.2.1             hecca717_1    conda-forge
+[conda] mkl                       2020.4             h726a3e6_304    conda-forge
+[conda] mkl-devel                 2020.4             ha770c72_305    conda-forge
+[conda] mkl-include               2020.4             h726a3e6_304    conda-forge
+[conda] numpy                     1.26.4          py310hb13e2d6_0    conda-forge
+[conda] pytorch                   2.2.0           py3.10_cuda12.1_cudnn8.9.2_0    pytorch
+[conda] pytorch-cuda              12.1                 ha16c6d3_6    pytorch
+[conda] pytorch-mutex             1.0                        cuda    pytorch
+[conda] torchaudio                2.2.0               py310_cu121    pytorch
+[conda] torchtriton               2.2.0                     py310    pytorch
+[conda] torchvision               0.17.0              py310_cu121    pytorch
+Label matrix shape: (2730, 26)
+Train samples: 2179
+Dev samples: 551
+Class  0: positive=293, negative=1886, weight=6.4369
+Class  1: positive=101, negative=2078, weight=20.5743
+Class  2: positive=99, negative=2080, weight=21.0101
+Class  3: positive=295, negative=1884, weight=6.3864
+Class  4: positive=383, negative=1796, weight=4.6893
+Class  5: positive=1402, negative=777, weight=0.5542
+Class  6: positive=253, negative=1926, weight=7.6126
+Class  7: positive=116, negative=2063, weight=17.7845
+Class  8: positive=2, negative=2177, weight=1088.5000
+Class  9: positive=6, negative=2173, weight=362.1667
+Class 10: positive=448, negative=1731, weight=3.8638
+Class 11: positive=22, negative=2157, weight=98.0455
+Class 12: positive=92, negative=2087, weight=22.6848
+Class 13: positive=10, negative=2169, weight=216.9000
+Class 14: positive=38, negative=2141, weight=56.3421
+Class 15: positive=27, negative=2152, weight=79.7037
+Class 16: positive=242, negative=1937, weight=8.0041
+Class 17: positive=427, negative=1752, weight=4.1030
+Class 18: positive=39, negative=2140, weight=54.8718
+Class 19: positive=174, negative=2005, weight=11.5230
+Class 20: positive=1677, negative=502, weight=0.2993
+Class 21: positive=417, negative=1762, weight=4.2254
+Class 22: positive=192, negative=1987, weight=10.3490
+Class 23: positive=2162, negative=17, weight=0.0079
+Class 24: positive=345, negative=1834, weight=5.3159
+Class 25: positive=48, negative=2131, weight=44.3958
+
+Class weights:
+Class  0: 6.4369
+Class  1: 20.0000
+Class  2: 20.0000
+Class  3: 6.3864
+Class  4: 4.6893
+Class  5: 0.5542
+Class  6: 7.6126
+Class  7: 17.7845
+Class  8: 20.0000
+Class  9: 20.0000
+Class 10: 3.8638
+Class 11: 20.0000
+Class 12: 20.0000
+Class 13: 20.0000
+Class 14: 20.0000
+Class 15: 20.0000
+Class 16: 8.0041
+Class 17: 4.1030
+Class 18: 20.0000
+Class 19: 11.5230
+Class 20: 0.5000
+Class 21: 4.2254
+Class 22: 10.3490
+Class 23: 0.5000
+Class 24: 5.3159
+Class 25: 20.0000
+Loaded 2179 training samples.
+Epoch 1: Loss=0.9653, Train Acc=0.7381, Train MCC=0.0477, Dev Acc=0.7353, Dev MCC=0.0319
+  -> New best Dev MCC: 0.0319
+Epoch 2: Loss=0.9024, Train Acc=0.7959, Train MCC=0.1165, Dev Acc=0.7923, Dev MCC=0.0827
+  -> New best Dev MCC: 0.0827
+Epoch 3: Loss=0.8200, Train Acc=0.8123, Train MCC=0.2577, Dev Acc=0.8000, Dev MCC=0.1282
+  -> New best Dev MCC: 0.1282
+Epoch 4: Loss=0.6933, Train Acc=0.8559, Train MCC=0.4272, Dev Acc=0.8234, Dev MCC=0.1405
+  -> New best Dev MCC: 0.1405
+Epoch 5: Loss=0.5439, Train Acc=0.8927, Train MCC=0.5795, Dev Acc=0.8475, Dev MCC=0.1842
+  -> New best Dev MCC: 0.1842
+Epoch 6: Loss=0.4339, Train Acc=0.9053, Train MCC=0.6287, Dev Acc=0.8503, Dev MCC=0.1703
+  -> No improvement in Dev MCC (1/2)
+Epoch 7: Loss=0.3370, Train Acc=0.9287, Train MCC=0.7076, Dev Acc=0.8634, Dev MCC=0.1874
+  -> New best Dev MCC: 0.1874
+Epoch 8: Loss=0.2693, Train Acc=0.9475, Train MCC=0.7743, Dev Acc=0.8754, Dev MCC=0.1890
+  -> New best Dev MCC: 0.1890
+Epoch 9: Loss=0.2189, Train Acc=0.9561, Train MCC=0.7910, Dev Acc=0.8723, Dev MCC=0.1944
+  -> New best Dev MCC: 0.1944
+Epoch 10: Loss=0.1741, Train Acc=0.9615, Train MCC=0.8171, Dev Acc=0.8744, Dev MCC=0.1979
+  -> New best Dev MCC: 0.1979
+Epoch 11: Loss=0.1432, Train Acc=0.9704, Train MCC=0.8497, Dev Acc=0.8795, Dev MCC=0.1998
+  -> New best Dev MCC: 0.1998
+Epoch 12: Loss=0.1171, Train Acc=0.9745, Train MCC=0.8786, Dev Acc=0.8825, Dev MCC=0.2088
+  -> New best Dev MCC: 0.2088
+Epoch 13: Loss=0.0947, Train Acc=0.9786, Train MCC=0.8917, Dev Acc=0.8852, Dev MCC=0.2119
+  -> New best Dev MCC: 0.2119
+Epoch 14: Loss=0.0798, Train Acc=0.9813, Train MCC=0.9130, Dev Acc=0.8873, Dev MCC=0.2067
+  -> No improvement in Dev MCC (1/2)
+Epoch 15: Loss=0.0694, Train Acc=0.9805, Train MCC=0.9201, Dev Acc=0.8825, Dev MCC=0.2038
+  -> No improvement in Dev MCC (2/2)
+Early stopping triggered after 15 epochs.
+Restoring best model with Dev MCC=0.2119
+Training finished.
+The accuracy of the model is: 0.885
+Matthews Correlation Coefficient of the model is: 0.212
+============ Job Information ===================================================
+Submitted: 2026-08-29T11:10:30
+Started: 2026-08-29T11:26:32
+Ended: 2026-08-29T12:31:57
+Elapsed: 66 min, Limit: 120 min, Difference: 54 min
+CPUs: 8, Nodes: 1
+Estimated credit Consumption: 165.00 core-hours
+================================================================================

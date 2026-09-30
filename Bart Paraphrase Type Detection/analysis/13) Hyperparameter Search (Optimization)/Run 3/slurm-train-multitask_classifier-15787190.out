@@ -1,0 +1,675 @@
+Submitting job with sbatch from directory: /mnt/vast-nhr/home/nirish.samant/u28445/dnlp
+Home directory: /user/nirish.samant/u28445
+Working directory: /mnt/vast-nhr/home/nirish.samant/u28445/dnlp
+Current node: ggpu193
+Python 3.10.20
+Collecting environment information...
+PyTorch version: 2.2.0
+Is debug build: False
+CUDA used to build PyTorch: 12.1
+ROCM used to build PyTorch: N/A
+
+OS: AlmaLinux 10.2 (Lavender Lion) (x86_64)
+GCC version: (GCC) 14.3.1 20251022 (Red Hat 14.3.1-4)
+Clang version: Could not collect
+CMake version: version 3.31.8
+Libc version: glibc-2.39
+
+Python version: 3.10.20 | packaged by conda-forge | (main, Jun 11 2026, 03:31:56) [GCC 14.3.0] (64-bit runtime)
+Python platform: Linux-6.12.0-211.49.1.el10_2.x86_64-x86_64-with-glibc2.39
+Is CUDA available: True
+CUDA runtime version: Could not collect
+CUDA_MODULE_LOADING set to: LAZY
+GPU models and configuration: GPU 0: NVIDIA A100-SXM4-80GB
+Nvidia driver version: 580.159.04
+cuDNN version: Could not collect
+HIP runtime version: N/A
+MIOpen runtime version: N/A
+Is XNNPACK available: True
+
+CPU:
+Architecture:                            x86_64
+CPU op-mode(s):                          32-bit, 64-bit
+Address sizes:                           48 bits physical, 48 bits virtual
+Byte Order:                              Little Endian
+CPU(s):                                  128
+On-line CPU(s) list:                     0-127
+Vendor ID:                               AuthenticAMD
+Model name:                              AMD EPYC 7513 32-Core Processor
+CPU family:                              25
+Model:                                   1
+Thread(s) per core:                      2
+Core(s) per socket:                      32
+Socket(s):                               2
+Stepping:                                1
+Frequency boost:                         enabled
+CPU(s) scaling MHz:                      73%
+CPU max MHz:                             3681.6399
+CPU min MHz:                             1500.0000
+BogoMIPS:                                5200.18
+Flags:                                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc cpuid extd_apicid aperfmperf rapl pni pclmulqdq monitor ssse3 fma cx16 pcid sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate ssbd mba ibrs ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local user_shstk clzero irperf xsaveerptr rdpru wbnoinvd amd_ppin brs arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold v_vmsave_vmload vgif v_spec_ctrl umip pku ospke vaes vpclmulqdq rdpid overflow_recov succor smca fsrm debug_swap
+L1d cache:                               2 MiB (64 instances)
+L1i cache:                               2 MiB (64 instances)
+L2 cache:                                32 MiB (64 instances)
+L3 cache:                                256 MiB (8 instances)
+NUMA node(s):                            2
+NUMA node0 CPU(s):                       0-31,64-95
+NUMA node1 CPU(s):                       32-63,96-127
+Vulnerability Gather data sampling:      Not affected
+Vulnerability Indirect target selection: Not affected
+Vulnerability Itlb multihit:             Not affected
+Vulnerability L1tf:                      Not affected
+Vulnerability Mds:                       Not affected
+Vulnerability Meltdown:                  Not affected
+Vulnerability Mmio stale data:           Not affected
+Vulnerability Old microcode:             Not affected
+Vulnerability Reg file data sampling:    Not affected
+Vulnerability Retbleed:                  Not affected
+Vulnerability Spec rstack overflow:      Vulnerable: Safe RET, no microcode
+Vulnerability Spec store bypass:         Mitigation; Speculative Store Bypass disabled via prctl
+Vulnerability Spectre v1:                Mitigation; usercopy/swapgs barriers and __user pointer sanitization
+Vulnerability Spectre v2:                Mitigation; Retpolines; IBPB conditional; IBRS_FW; STIBP always-on; RSB filling; PBRSB-eIBRS Not affected; BHI Not affected
+Vulnerability Srbds:                     Not affected
+Vulnerability Tsa:                       Vulnerable: No microcode
+Vulnerability Tsx async abort:           Not affected
+Vulnerability Vmscape:                   Mitigation; IBPB before exit to userspace
+
+Versions of relevant libraries:
+[pip3] numpy==1.26.4
+[pip3] torch==2.2.0
+[pip3] torchaudio==2.2.0
+[pip3] torchvision==0.17.0
+[pip3] triton==2.2.0
+[conda] blas                      2.108                       mkl    conda-forge
+[conda] blas-devel                3.9.0                     8_mkl    conda-forge
+[conda] libblas                   3.9.0                     8_mkl    conda-forge
+[conda] libcblas                  3.9.0                     8_mkl    conda-forge
+[conda] liblapack                 3.9.0                     8_mkl    conda-forge
+[conda] liblapacke                3.9.0                     8_mkl    conda-forge
+[conda] libopenvino-pytorch-frontend 2026.2.1             hecca717_1    conda-forge
+[conda] mkl                       2020.4             h726a3e6_304    conda-forge
+[conda] mkl-devel                 2020.4             ha770c72_305    conda-forge
+[conda] mkl-include               2020.4             h726a3e6_304    conda-forge
+[conda] numpy                     1.26.4          py310hb13e2d6_0    conda-forge
+[conda] pytorch                   2.2.0           py3.10_cuda12.1_cudnn8.9.2_0    pytorch
+[conda] pytorch-cuda              12.1                 ha16c6d3_6    pytorch
+[conda] pytorch-mutex             1.0                        cuda    pytorch
+[conda] torchaudio                2.2.0               py310_cu121    pytorch
+[conda] torchtriton               2.2.0                     py310    pytorch
+[conda] torchvision               0.17.0              py310_cu121    pytorch
+==========================================
+Job started: Tue Sep  8 12:17:12 CEST 2026
+Job ID: 15787190
+Node: ggpu193
+==========================================
+
+Running:
+python -u bart_detection.py --use_gpu --learning_rate 6.0344883178952e-05 --weight_decay 0.00019651251661113368 --dropout 0.3964360532284742 --classifier_hidden_size 512 --warmup_ratio 0.027173984263483764 --batch_size 8 --epochs 20 --patience 5 --loss BCE --pooling mean --max_length 512 --seed 11711 --disable_tqdm
+Label matrix shape: (2730, 26)
+Train samples: 2179
+Dev samples: 551
+/user/nirish.samant/u28445/.conda/envs/dnlp/lib/python3.10/site-packages/huggingface_hub/file_download.py:942: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Loaded 2179 training samples.
+Epoch 1: Loss=0.5715, Train Acc=0.9058, Train MCC=0.0108, Dev Acc=0.7662, Dev MCC=0.0673
+  -> New best Dev MCC: 0.0673
+Epoch 2: Loss=0.5363, Train Acc=0.9054, Train MCC=0.0033, Dev Acc=0.6640, Dev MCC=0.0628
+  -> No improvement in Dev MCC (1/5)
+Epoch 3: Loss=0.5143, Train Acc=0.9048, Train MCC=0.0637, Dev Acc=0.7690, Dev MCC=0.1170
+  -> New best Dev MCC: 0.1170
+Epoch 4: Loss=0.4810, Train Acc=0.9079, Train MCC=0.1543, Dev Acc=0.8615, Dev MCC=0.1577
+  -> New best Dev MCC: 0.1577
+Epoch 5: Loss=0.4323, Train Acc=0.9098, Train MCC=0.3874, Dev Acc=0.8811, Dev MCC=0.1585
+  -> New best Dev MCC: 0.1585
+Epoch 6: Loss=0.3655, Train Acc=0.9228, Train MCC=0.5557, Dev Acc=0.8851, Dev MCC=0.1769
+  -> New best Dev MCC: 0.1769
+Epoch 7: Loss=0.2970, Train Acc=0.9377, Train MCC=0.6711, Dev Acc=0.8954, Dev MCC=0.1978
+  -> New best Dev MCC: 0.1978
+Epoch 8: Loss=0.2356, Train Acc=0.9539, Train MCC=0.7618, Dev Acc=0.8978, Dev MCC=0.2081
+  -> New best Dev MCC: 0.2081
+Epoch 9: Loss=0.1824, Train Acc=0.9644, Train MCC=0.8311, Dev Acc=0.8972, Dev MCC=0.2091
+  -> New best Dev MCC: 0.2091
+Epoch 10: Loss=0.1396, Train Acc=0.9717, Train MCC=0.8447, Dev Acc=0.8966, Dev MCC=0.2048
+  -> No improvement in Dev MCC (1/5)
+Epoch 11: Loss=0.1055, Train Acc=0.9797, Train MCC=0.8725, Dev Acc=0.8984, Dev MCC=0.2120
+  -> New best Dev MCC: 0.2120
+Epoch 12: Loss=0.0843, Train Acc=0.9857, Train MCC=0.9211, Dev Acc=0.8950, Dev MCC=0.2096
+  -> No improvement in Dev MCC (1/5)
+Epoch 13: Loss=0.0654, Train Acc=0.9867, Train MCC=0.9250, Dev Acc=0.8968, Dev MCC=0.2065
+  -> No improvement in Dev MCC (2/5)
+Epoch 14: Loss=0.0529, Train Acc=0.9930, Train MCC=0.9444, Dev Acc=0.9011, Dev MCC=0.2185
+  -> New best Dev MCC: 0.2185
+Epoch 15: Loss=0.0420, Train Acc=0.9956, Train MCC=0.9531, Dev Acc=0.9005, Dev MCC=0.2045
+  -> No improvement in Dev MCC (1/5)
+Epoch 16: Loss=0.0327, Train Acc=0.9977, Train MCC=0.9678, Dev Acc=0.9003, Dev MCC=0.2090
+  -> No improvement in Dev MCC (2/5)
+Epoch 17: Loss=0.0266, Train Acc=0.9984, Train MCC=0.9648, Dev Acc=0.9026, Dev MCC=0.2083
+  -> No improvement in Dev MCC (3/5)
+Epoch 18: Loss=0.0229, Train Acc=0.9987, Train MCC=0.9756, Dev Acc=0.9042, Dev MCC=0.2131
+  -> No improvement in Dev MCC (4/5)
+Epoch 19: Loss=0.0193, Train Acc=0.9994, Train MCC=0.9801, Dev Acc=0.9039, Dev MCC=0.2114
+  -> No improvement in Dev MCC (5/5)
+Early stopping triggered after 19 epochs.
+Restoring best model with Dev MCC=0.2185
+Training finished.
+The accuracy of the model is: 0.901
+Matthews Correlation Coefficient of the model is: 0.218
+/user/nirish.samant/u28445/.conda/envs/dnlp/lib/python3.10/site-packages/huggingface_hub/file_download.py:942: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Trial 0 Dev MCC = 0.2180 Dev Accuracy = 0.9010
+
+Running:
+python -u bart_detection.py --use_gpu --learning_rate 0.0003062098234851564 --weight_decay 0.0002065918941216954 --dropout 0.1263472735932242 --classifier_hidden_size 512 --warmup_ratio 0.11318275986779575 --batch_size 8 --epochs 20 --patience 5 --loss BCE --pooling mean --max_length 512 --seed 11711 --disable_tqdm
+Label matrix shape: (2730, 26)
+Train samples: 2179
+Dev samples: 551
+/user/nirish.samant/u28445/.conda/envs/dnlp/lib/python3.10/site-packages/huggingface_hub/file_download.py:942: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Loaded 2179 training samples.
+Epoch 1: Loss=0.5584, Train Acc=0.9053, Train MCC=0.0000, Dev Acc=0.7211, Dev MCC=0.0752
+  -> New best Dev MCC: 0.0752
+Epoch 2: Loss=0.5388, Train Acc=0.9053, Train MCC=0.0000, Dev Acc=0.5410, Dev MCC=0.0232
+  -> No improvement in Dev MCC (1/5)
+Epoch 3: Loss=0.5359, Train Acc=0.9053, Train MCC=0.0000, Dev Acc=0.5237, Dev MCC=0.0250
+  -> No improvement in Dev MCC (2/5)
+Epoch 4: Loss=0.5329, Train Acc=0.9053, Train MCC=0.0000, Dev Acc=0.4204, Dev MCC=0.0202
+  -> No improvement in Dev MCC (3/5)
+Epoch 5: Loss=0.5314, Train Acc=0.9053, Train MCC=0.0000, Dev Acc=0.4128, Dev MCC=0.0043
+  -> No improvement in Dev MCC (4/5)
+Epoch 6: Loss=0.5313, Train Acc=0.9053, Train MCC=0.0000, Dev Acc=0.3459, Dev MCC=0.0070
+  -> No improvement in Dev MCC (5/5)
+Early stopping triggered after 6 epochs.
+Restoring best model with Dev MCC=0.0752
+Training finished.
+The accuracy of the model is: 0.721
+Matthews Correlation Coefficient of the model is: 0.075
+/user/nirish.samant/u28445/.conda/envs/dnlp/lib/python3.10/site-packages/huggingface_hub/file_download.py:942: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Trial 1 Dev MCC = 0.0750 Dev Accuracy = 0.7210
+
+Running:
+python -u bart_detection.py --use_gpu --learning_rate 1.9309101858379307e-05 --weight_decay 0.002354594583144161 --dropout 0.3667804959079609 --classifier_hidden_size 1024 --warmup_ratio 0.12322882568230027 --batch_size 16 --epochs 20 --patience 5 --loss BCE --pooling mean --max_length 512 --seed 11711 --disable_tqdm
+Label matrix shape: (2730, 26)
+Train samples: 2179
+Dev samples: 551
+/user/nirish.samant/u28445/.conda/envs/dnlp/lib/python3.10/site-packages/huggingface_hub/file_download.py:942: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Loaded 2179 training samples.
+Epoch 1: Loss=0.6083, Train Acc=0.9053, Train MCC=0.0000, Dev Acc=0.6648, Dev MCC=0.0454
+  -> New best Dev MCC: 0.0454
+Epoch 2: Loss=0.5299, Train Acc=0.9058, Train MCC=0.0277, Dev Acc=0.7901, Dev MCC=0.0869
+  -> New best Dev MCC: 0.0869
+Epoch 3: Loss=0.5116, Train Acc=0.9051, Train MCC=0.0612, Dev Acc=0.8270, Dev MCC=0.1341
+  -> New best Dev MCC: 0.1341
+Epoch 4: Loss=0.4696, Train Acc=0.9108, Train MCC=0.2595, Dev Acc=0.8512, Dev MCC=0.1477
+  -> New best Dev MCC: 0.1477
+Epoch 5: Loss=0.4204, Train Acc=0.9159, Train MCC=0.4341, Dev Acc=0.8778, Dev MCC=0.1610
+  -> New best Dev MCC: 0.1610
+Epoch 6: Loss=0.3776, Train Acc=0.9275, Train MCC=0.5685, Dev Acc=0.8922, Dev MCC=0.1737
+  -> New best Dev MCC: 0.1737
+Epoch 7: Loss=0.3344, Train Acc=0.9332, Train MCC=0.6118, Dev Acc=0.8833, Dev MCC=0.1889
+  -> New best Dev MCC: 0.1889
+Epoch 8: Loss=0.2979, Train Acc=0.9415, Train MCC=0.6711, Dev Acc=0.8885, Dev MCC=0.1782
+  -> No improvement in Dev MCC (1/5)
+Epoch 9: Loss=0.2599, Train Acc=0.9482, Train MCC=0.7207, Dev Acc=0.8965, Dev MCC=0.1848
+  -> No improvement in Dev MCC (2/5)
+Epoch 10: Loss=0.2298, Train Acc=0.9559, Train MCC=0.7785, Dev Acc=0.8855, Dev MCC=0.1880
+  -> No improvement in Dev MCC (3/5)
+Epoch 11: Loss=0.2025, Train Acc=0.9617, Train MCC=0.8003, Dev Acc=0.9008, Dev MCC=0.1857
+  -> No improvement in Dev MCC (4/5)
+Epoch 12: Loss=0.1774, Train Acc=0.9661, Train MCC=0.8254, Dev Acc=0.8998, Dev MCC=0.1874
+  -> No improvement in Dev MCC (5/5)
+Early stopping triggered after 12 epochs.
+Restoring best model with Dev MCC=0.1889
+Training finished.
+The accuracy of the model is: 0.883
+Matthews Correlation Coefficient of the model is: 0.189
+/user/nirish.samant/u28445/.conda/envs/dnlp/lib/python3.10/site-packages/huggingface_hub/file_download.py:942: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Trial 2 Dev MCC = 0.1890 Dev Accuracy = 0.8830
+
+Running:
+python -u bart_detection.py --use_gpu --learning_rate 5.339632413082005e-05 --weight_decay 0.00022766428584793658 --dropout 0.19163350576094107 --classifier_hidden_size 1024 --warmup_ratio 0.11940831892257933 --batch_size 8 --epochs 20 --patience 5 --loss BCE --pooling mean --max_length 512 --seed 11711 --disable_tqdm
+Label matrix shape: (2730, 26)
+Train samples: 2179
+Dev samples: 551
+/user/nirish.samant/u28445/.conda/envs/dnlp/lib/python3.10/site-packages/huggingface_hub/file_download.py:942: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Loaded 2179 training samples.
+Epoch 1: Loss=0.5655, Train Acc=0.9058, Train MCC=0.0315, Dev Acc=0.7553, Dev MCC=0.0978
+  -> New best Dev MCC: 0.0978
+Epoch 2: Loss=0.5123, Train Acc=0.9085, Train MCC=0.0966, Dev Acc=0.7966, Dev MCC=0.1493
+  -> New best Dev MCC: 0.1493
+Epoch 3: Loss=0.4686, Train Acc=0.9070, Train MCC=0.2534, Dev Acc=0.8674, Dev MCC=0.1691
+  -> New best Dev MCC: 0.1691
+Epoch 4: Loss=0.4012, Train Acc=0.9066, Train MCC=0.4824, Dev Acc=0.8876, Dev MCC=0.1991
+  -> New best Dev MCC: 0.1991
+Epoch 5: Loss=0.3237, Train Acc=0.9274, Train MCC=0.6270, Dev Acc=0.8928, Dev MCC=0.1901
+  -> No improvement in Dev MCC (1/5)
+Epoch 6: Loss=0.2502, Train Acc=0.9485, Train MCC=0.7351, Dev Acc=0.9007, Dev MCC=0.2110
+  -> New best Dev MCC: 0.2110
+Epoch 7: Loss=0.1871, Train Acc=0.9644, Train MCC=0.8172, Dev Acc=0.9044, Dev MCC=0.2089
+  -> No improvement in Dev MCC (1/5)
+Epoch 8: Loss=0.1386, Train Acc=0.9685, Train MCC=0.8473, Dev Acc=0.9019, Dev MCC=0.2418
+  -> New best Dev MCC: 0.2418
+Epoch 9: Loss=0.1020, Train Acc=0.9801, Train MCC=0.8907, Dev Acc=0.9035, Dev MCC=0.2408
+  -> No improvement in Dev MCC (1/5)
+Epoch 10: Loss=0.0751, Train Acc=0.9872, Train MCC=0.9298, Dev Acc=0.9050, Dev MCC=0.2465
+  -> New best Dev MCC: 0.2465
+Epoch 11: Loss=0.0537, Train Acc=0.9877, Train MCC=0.9429, Dev Acc=0.9046, Dev MCC=0.2397
+  -> No improvement in Dev MCC (1/5)
+Epoch 12: Loss=0.0373, Train Acc=0.9920, Train MCC=0.9545, Dev Acc=0.9072, Dev MCC=0.2462
+  -> No improvement in Dev MCC (2/5)
+Epoch 13: Loss=0.0272, Train Acc=0.9962, Train MCC=0.9775, Dev Acc=0.9080, Dev MCC=0.2539
+  -> New best Dev MCC: 0.2539
+Epoch 14: Loss=0.0186, Train Acc=0.9981, Train MCC=0.9840, Dev Acc=0.9086, Dev MCC=0.2465
+  -> No improvement in Dev MCC (1/5)
+Epoch 15: Loss=0.0153, Train Acc=0.9988, Train MCC=0.9914, Dev Acc=0.9090, Dev MCC=0.2423
+  -> No improvement in Dev MCC (2/5)
+Epoch 16: Loss=0.0115, Train Acc=0.9993, Train MCC=0.9937, Dev Acc=0.9095, Dev MCC=0.2428
+  -> No improvement in Dev MCC (3/5)
+Epoch 17: Loss=0.0082, Train Acc=0.9995, Train MCC=0.9952, Dev Acc=0.9083, Dev MCC=0.2386
+  -> No improvement in Dev MCC (4/5)
+Epoch 18: Loss=0.0064, Train Acc=0.9998, Train MCC=0.9987, Dev Acc=0.9100, Dev MCC=0.2365
+  -> No improvement in Dev MCC (5/5)
+Early stopping triggered after 18 epochs.
+Restoring best model with Dev MCC=0.2539
+Training finished.
+The accuracy of the model is: 0.908
+Matthews Correlation Coefficient of the model is: 0.254
+/user/nirish.samant/u28445/.conda/envs/dnlp/lib/python3.10/site-packages/huggingface_hub/file_download.py:942: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Trial 3 Dev MCC = 0.2540 Dev Accuracy = 0.9080
+
+Running:
+python -u bart_detection.py --use_gpu --learning_rate 0.0001157965558484527 --weight_decay 0.00036382408490529536 --dropout 0.2753107598000638 --classifier_hidden_size 1024 --warmup_ratio 0.011208231545546666 --batch_size 16 --epochs 20 --patience 5 --loss BCE --pooling mean --max_length 512 --seed 11711 --disable_tqdm
+Label matrix shape: (2730, 26)
+Train samples: 2179
+Dev samples: 551
+/user/nirish.samant/u28445/.conda/envs/dnlp/lib/python3.10/site-packages/huggingface_hub/file_download.py:942: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Loaded 2179 training samples.
+Epoch 1: Loss=0.5532, Train Acc=0.9053, Train MCC=0.0000, Dev Acc=0.4547, Dev MCC=0.0308
+  -> New best Dev MCC: 0.0308
+Epoch 2: Loss=0.5332, Train Acc=0.9053, Train MCC=0.0000, Dev Acc=0.6097, Dev MCC=0.0280
+  -> No improvement in Dev MCC (1/5)
+Epoch 3: Loss=0.5335, Train Acc=0.9053, Train MCC=0.0000, Dev Acc=0.5352, Dev MCC=0.0386
+  -> New best Dev MCC: 0.0386
+Epoch 4: Loss=0.5307, Train Acc=0.9053, Train MCC=0.0000, Dev Acc=0.5001, Dev MCC=0.0448
+  -> New best Dev MCC: 0.0448
+Epoch 5: Loss=0.5299, Train Acc=0.9053, Train MCC=0.0000, Dev Acc=0.5704, Dev MCC=0.0459
+  -> New best Dev MCC: 0.0459
+Epoch 6: Loss=0.5292, Train Acc=0.9053, Train MCC=0.0000, Dev Acc=0.4708, Dev MCC=0.0427
+  -> No improvement in Dev MCC (1/5)
+Epoch 7: Loss=0.5293, Train Acc=0.9053, Train MCC=0.0000, Dev Acc=0.5355, Dev MCC=0.0242
+  -> No improvement in Dev MCC (2/5)
+Epoch 8: Loss=0.5286, Train Acc=0.9053, Train MCC=0.0000, Dev Acc=0.4894, Dev MCC=0.0149
+  -> No improvement in Dev MCC (3/5)
+Epoch 9: Loss=0.5279, Train Acc=0.9053, Train MCC=0.0000, Dev Acc=0.5161, Dev MCC=0.0240
+  -> No improvement in Dev MCC (4/5)
+Epoch 10: Loss=0.5288, Train Acc=0.9053, Train MCC=0.0000, Dev Acc=0.4848, Dev MCC=0.0184
+  -> No improvement in Dev MCC (5/5)
+Early stopping triggered after 10 epochs.
+Restoring best model with Dev MCC=0.0459
+Training finished.
+The accuracy of the model is: 0.570
+Matthews Correlation Coefficient of the model is: 0.046
+/user/nirish.samant/u28445/.conda/envs/dnlp/lib/python3.10/site-packages/huggingface_hub/file_download.py:942: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Trial 4 Dev MCC = 0.0460 Dev Accuracy = 0.5700
+
+Running:
+python -u bart_detection.py --use_gpu --learning_rate 5.239996909548754e-06 --weight_decay 0.0014028104207268997 --dropout 0.23769862657161347 --classifier_hidden_size 512 --warmup_ratio 0.11358410343992563 --batch_size 16 --epochs 20 --patience 5 --loss BCE --pooling mean --max_length 512 --seed 11711 --disable_tqdm
+Label matrix shape: (2730, 26)
+Train samples: 2179
+Dev samples: 551
+/user/nirish.samant/u28445/.conda/envs/dnlp/lib/python3.10/site-packages/huggingface_hub/file_download.py:942: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Loaded 2179 training samples.
+Epoch 1: Loss=0.6687, Train Acc=0.8674, Train MCC=0.0007, Dev Acc=0.5476, Dev MCC=0.0138
+  -> New best Dev MCC: 0.0138
+Epoch 2: Loss=0.5418, Train Acc=0.9053, Train MCC=-0.0001, Dev Acc=0.7077, Dev MCC=0.0470
+  -> New best Dev MCC: 0.0470
+Epoch 3: Loss=0.5312, Train Acc=0.9067, Train MCC=0.0254, Dev Acc=0.8059, Dev MCC=0.0791
+  -> New best Dev MCC: 0.0791
+Epoch 4: Loss=0.5152, Train Acc=0.9082, Train MCC=0.0465, Dev Acc=0.8226, Dev MCC=0.1079
+  -> New best Dev MCC: 0.1079
+Epoch 5: Loss=0.4963, Train Acc=0.9092, Train MCC=0.0897, Dev Acc=0.8601, Dev MCC=0.1237
+  -> New best Dev MCC: 0.1237
+Epoch 6: Loss=0.4734, Train Acc=0.9126, Train MCC=0.1702, Dev Acc=0.8515, Dev MCC=0.1296
+  -> New best Dev MCC: 0.1296
+Epoch 7: Loss=0.4534, Train Acc=0.9139, Train MCC=0.2442, Dev Acc=0.8506, Dev MCC=0.1408
+  -> New best Dev MCC: 0.1408
+Epoch 8: Loss=0.4329, Train Acc=0.9158, Train MCC=0.3365, Dev Acc=0.8473, Dev MCC=0.1401
+  -> No improvement in Dev MCC (1/5)
+Epoch 9: Loss=0.4144, Train Acc=0.9183, Train MCC=0.3824, Dev Acc=0.8640, Dev MCC=0.1385
+  -> No improvement in Dev MCC (2/5)
+Epoch 10: Loss=0.4031, Train Acc=0.9198, Train MCC=0.4234, Dev Acc=0.8759, Dev MCC=0.1518
+  -> New best Dev MCC: 0.1518
+Epoch 11: Loss=0.3860, Train Acc=0.9211, Train MCC=0.4585, Dev Acc=0.8771, Dev MCC=0.1452
+  -> No improvement in Dev MCC (1/5)
+Epoch 12: Loss=0.3738, Train Acc=0.9226, Train MCC=0.5146, Dev Acc=0.8769, Dev MCC=0.1403
+  -> No improvement in Dev MCC (2/5)
+Epoch 13: Loss=0.3658, Train Acc=0.9247, Train MCC=0.5477, Dev Acc=0.8792, Dev MCC=0.1546
+  -> New best Dev MCC: 0.1546
+Epoch 14: Loss=0.3538, Train Acc=0.9266, Train MCC=0.5745, Dev Acc=0.8822, Dev MCC=0.1483
+  -> No improvement in Dev MCC (1/5)
+Epoch 15: Loss=0.3467, Train Acc=0.9276, Train MCC=0.5898, Dev Acc=0.8871, Dev MCC=0.1526
+  -> No improvement in Dev MCC (2/5)
+Epoch 16: Loss=0.3366, Train Acc=0.9288, Train MCC=0.6012, Dev Acc=0.8894, Dev MCC=0.1580
+  -> New best Dev MCC: 0.1580
+Epoch 17: Loss=0.3323, Train Acc=0.9293, Train MCC=0.6071, Dev Acc=0.8885, Dev MCC=0.1539
+  -> No improvement in Dev MCC (1/5)
+Epoch 18: Loss=0.3276, Train Acc=0.9294, Train MCC=0.6098, Dev Acc=0.8871, Dev MCC=0.1500
+  -> No improvement in Dev MCC (2/5)
+Epoch 19: Loss=0.3250, Train Acc=0.9301, Train MCC=0.6197, Dev Acc=0.8869, Dev MCC=0.1526
+  -> No improvement in Dev MCC (3/5)
+Epoch 20: Loss=0.3215, Train Acc=0.9303, Train MCC=0.6207, Dev Acc=0.8866, Dev MCC=0.1518
+  -> No improvement in Dev MCC (4/5)
+Restoring best model with Dev MCC=0.1580
+Training finished.
+The accuracy of the model is: 0.889
+Matthews Correlation Coefficient of the model is: 0.158
+/user/nirish.samant/u28445/.conda/envs/dnlp/lib/python3.10/site-packages/huggingface_hub/file_download.py:942: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Trial 5 Dev MCC = 0.1580 Dev Accuracy = 0.8890
+
+Running:
+python -u bart_detection.py --use_gpu --learning_rate 3.944233665152262e-05 --weight_decay 2.402857406597512e-05 --dropout 0.3732384992018102 --classifier_hidden_size 512 --warmup_ratio 0.08956939218704259 --batch_size 16 --epochs 20 --patience 5 --loss BCE --pooling mean --max_length 512 --seed 11711 --disable_tqdm
+Label matrix shape: (2730, 26)
+Train samples: 2179
+Dev samples: 551
+/user/nirish.samant/u28445/.conda/envs/dnlp/lib/python3.10/site-packages/huggingface_hub/file_download.py:942: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Loaded 2179 training samples.
+Epoch 1: Loss=0.5971, Train Acc=0.9053, Train MCC=-0.0004, Dev Acc=0.4649, Dev MCC=0.0226
+  -> New best Dev MCC: 0.0226
+Epoch 2: Loss=0.5489, Train Acc=0.9059, Train MCC=0.0145, Dev Acc=0.6967, Dev MCC=0.0679
+  -> New best Dev MCC: 0.0679
+Epoch 3: Loss=0.5317, Train Acc=0.9063, Train MCC=0.0353, Dev Acc=0.8380, Dev MCC=0.0991
+  -> New best Dev MCC: 0.0991
+Epoch 4: Loss=0.5148, Train Acc=0.9070, Train MCC=0.1112, Dev Acc=0.8018, Dev MCC=0.0935
+  -> No improvement in Dev MCC (1/5)
+Epoch 5: Loss=0.4779, Train Acc=0.9079, Train MCC=0.2552, Dev Acc=0.8546, Dev MCC=0.1361
+  -> New best Dev MCC: 0.1361
+Epoch 6: Loss=0.4175, Train Acc=0.9151, Train MCC=0.4684, Dev Acc=0.8727, Dev MCC=0.1528
+  -> New best Dev MCC: 0.1528
+Epoch 7: Loss=0.3593, Train Acc=0.9286, Train MCC=0.6029, Dev Acc=0.8897, Dev MCC=0.1664
+  -> New best Dev MCC: 0.1664
+Epoch 8: Loss=0.3001, Train Acc=0.9414, Train MCC=0.6929, Dev Acc=0.8927, Dev MCC=0.1831
+  -> New best Dev MCC: 0.1831
+Epoch 9: Loss=0.2519, Train Acc=0.9475, Train MCC=0.7326, Dev Acc=0.8948, Dev MCC=0.1687
+  -> No improvement in Dev MCC (1/5)
+Epoch 10: Loss=0.2125, Train Acc=0.9596, Train MCC=0.7861, Dev Acc=0.8978, Dev MCC=0.1735
+  -> No improvement in Dev MCC (2/5)
+Epoch 11: Loss=0.1842, Train Acc=0.9677, Train MCC=0.8361, Dev Acc=0.8997, Dev MCC=0.1755
+  -> No improvement in Dev MCC (3/5)
+Epoch 12: Loss=0.1497, Train Acc=0.9720, Train MCC=0.8559, Dev Acc=0.8991, Dev MCC=0.1820
+  -> No improvement in Dev MCC (4/5)
+Epoch 13: Loss=0.1305, Train Acc=0.9781, Train MCC=0.8792, Dev Acc=0.8974, Dev MCC=0.1839
+  -> New best Dev MCC: 0.1839
+Epoch 14: Loss=0.1098, Train Acc=0.9843, Train MCC=0.9095, Dev Acc=0.9021, Dev MCC=0.1987
+  -> New best Dev MCC: 0.1987
+Epoch 15: Loss=0.0978, Train Acc=0.9873, Train MCC=0.9211, Dev Acc=0.9044, Dev MCC=0.1908
+  -> No improvement in Dev MCC (1/5)
+Epoch 16: Loss=0.0847, Train Acc=0.9870, Train MCC=0.9185, Dev Acc=0.9035, Dev MCC=0.1910
+  -> No improvement in Dev MCC (2/5)
+Epoch 17: Loss=0.0742, Train Acc=0.9896, Train MCC=0.9283, Dev Acc=0.9030, Dev MCC=0.1879
+  -> No improvement in Dev MCC (3/5)
+Epoch 18: Loss=0.0651, Train Acc=0.9922, Train MCC=0.9361, Dev Acc=0.9044, Dev MCC=0.1882
+  -> No improvement in Dev MCC (4/5)
+Epoch 19: Loss=0.0593, Train Acc=0.9934, Train MCC=0.9392, Dev Acc=0.9051, Dev MCC=0.1817
+  -> No improvement in Dev MCC (5/5)
+Early stopping triggered after 19 epochs.
+Restoring best model with Dev MCC=0.1987
+Training finished.
+The accuracy of the model is: 0.902
+Matthews Correlation Coefficient of the model is: 0.199
+/user/nirish.samant/u28445/.conda/envs/dnlp/lib/python3.10/site-packages/huggingface_hub/file_download.py:942: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Trial 6 Dev MCC = 0.1990 Dev Accuracy = 0.9020
+
+Running:
+python -u bart_detection.py --use_gpu --learning_rate 4.474107410910154e-05 --weight_decay 0.005825358326487494 --dropout 0.31109120825044745 --classifier_hidden_size 512 --warmup_ratio 0.17122949776239568 --batch_size 16 --epochs 20 --patience 5 --loss BCE --pooling mean --max_length 512 --seed 11711 --disable_tqdm
+Label matrix shape: (2730, 26)
+Train samples: 2179
+Dev samples: 551
+/user/nirish.samant/u28445/.conda/envs/dnlp/lib/python3.10/site-packages/huggingface_hub/file_download.py:942: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Loaded 2179 training samples.
+Epoch 1: Loss=0.6068, Train Acc=0.9053, Train MCC=0.0000, Dev Acc=0.7349, Dev MCC=0.0557
+  -> New best Dev MCC: 0.0557
+Epoch 2: Loss=0.5357, Train Acc=0.9070, Train MCC=0.0449, Dev Acc=0.8503, Dev MCC=0.0982
+  -> New best Dev MCC: 0.0982
+Epoch 3: Loss=0.5030, Train Acc=0.9092, Train MCC=0.1950, Dev Acc=0.8639, Dev MCC=0.1398
+  -> New best Dev MCC: 0.1398
+Epoch 4: Loss=0.4507, Train Acc=0.9090, Train MCC=0.3794, Dev Acc=0.8820, Dev MCC=0.1777
+  -> New best Dev MCC: 0.1777
+Epoch 5: Loss=0.3802, Train Acc=0.9280, Train MCC=0.6000, Dev Acc=0.8994, Dev MCC=0.1982
+  -> New best Dev MCC: 0.1982
+Epoch 6: Loss=0.3039, Train Acc=0.9334, Train MCC=0.6775, Dev Acc=0.8991, Dev MCC=0.2129
+  -> New best Dev MCC: 0.2129
+Epoch 7: Loss=0.2514, Train Acc=0.9510, Train MCC=0.7780, Dev Acc=0.9005, Dev MCC=0.2148
+  -> New best Dev MCC: 0.2148
+Epoch 8: Loss=0.1987, Train Acc=0.9621, Train MCC=0.8258, Dev Acc=0.9017, Dev MCC=0.2103
+  -> No improvement in Dev MCC (1/5)
+Epoch 9: Loss=0.1593, Train Acc=0.9728, Train MCC=0.8689, Dev Acc=0.9065, Dev MCC=0.2415
+  -> New best Dev MCC: 0.2415
+Epoch 10: Loss=0.1276, Train Acc=0.9799, Train MCC=0.8967, Dev Acc=0.9047, Dev MCC=0.2328
+  -> No improvement in Dev MCC (1/5)
+Epoch 11: Loss=0.1021, Train Acc=0.9858, Train MCC=0.9257, Dev Acc=0.9073, Dev MCC=0.2413
+  -> No improvement in Dev MCC (2/5)
+Epoch 12: Loss=0.0813, Train Acc=0.9894, Train MCC=0.9263, Dev Acc=0.9081, Dev MCC=0.2357
+  -> No improvement in Dev MCC (3/5)
+Epoch 13: Loss=0.0671, Train Acc=0.9920, Train MCC=0.9366, Dev Acc=0.9095, Dev MCC=0.2428
+  -> New best Dev MCC: 0.2428
+Epoch 14: Loss=0.0586, Train Acc=0.9921, Train MCC=0.9400, Dev Acc=0.9072, Dev MCC=0.2428
+  -> New best Dev MCC: 0.2428
+Epoch 15: Loss=0.0476, Train Acc=0.9960, Train MCC=0.9501, Dev Acc=0.9090, Dev MCC=0.2447
+  -> New best Dev MCC: 0.2447
+Epoch 16: Loss=0.0360, Train Acc=0.9971, Train MCC=0.9524, Dev Acc=0.9113, Dev MCC=0.2531
+  -> New best Dev MCC: 0.2531
+Epoch 17: Loss=0.0293, Train Acc=0.9974, Train MCC=0.9683, Dev Acc=0.9088, Dev MCC=0.2475
+  -> No improvement in Dev MCC (1/5)
+Epoch 18: Loss=0.0255, Train Acc=0.9986, Train MCC=0.9732, Dev Acc=0.9122, Dev MCC=0.2461
+  -> No improvement in Dev MCC (2/5)
+Epoch 19: Loss=0.0219, Train Acc=0.9990, Train MCC=0.9810, Dev Acc=0.9116, Dev MCC=0.2521
+  -> No improvement in Dev MCC (3/5)
+Epoch 20: Loss=0.0200, Train Acc=0.9989, Train MCC=0.9786, Dev Acc=0.9120, Dev MCC=0.2516
+  -> No improvement in Dev MCC (4/5)
+Restoring best model with Dev MCC=0.2531
+Training finished.
+The accuracy of the model is: 0.911
+Matthews Correlation Coefficient of the model is: 0.253
+/user/nirish.samant/u28445/.conda/envs/dnlp/lib/python3.10/site-packages/huggingface_hub/file_download.py:942: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Trial 7 Dev MCC = 0.2530 Dev Accuracy = 0.9110
+
+Running:
+python -u bart_detection.py --use_gpu --learning_rate 1.6298209840148427e-05 --weight_decay 3.337736374668987e-05 --dropout 0.23730632818740557 --classifier_hidden_size 512 --warmup_ratio 0.14099939899037697 --batch_size 4 --epochs 20 --patience 5 --loss BCE --pooling mean --max_length 512 --seed 11711 --disable_tqdm
+Label matrix shape: (2730, 26)
+Train samples: 2179
+Dev samples: 551
+/user/nirish.samant/u28445/.conda/envs/dnlp/lib/python3.10/site-packages/huggingface_hub/file_download.py:942: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Loaded 2179 training samples.
+Epoch 1: Loss=0.5905, Train Acc=0.9053, Train MCC=0.0000, Dev Acc=0.7521, Dev MCC=0.0630
+  -> New best Dev MCC: 0.0630
+Epoch 2: Loss=0.5330, Train Acc=0.9074, Train MCC=0.0414, Dev Acc=0.8528, Dev MCC=0.1073
+  -> New best Dev MCC: 0.1073
+Epoch 3: Loss=0.5015, Train Acc=0.9111, Train MCC=0.1743, Dev Acc=0.8815, Dev MCC=0.1372
+  -> New best Dev MCC: 0.1372
+Epoch 4: Loss=0.4403, Train Acc=0.9182, Train MCC=0.3726, Dev Acc=0.8906, Dev MCC=0.1759
+  -> New best Dev MCC: 0.1759
+Epoch 5: Loss=0.3633, Train Acc=0.9315, Train MCC=0.5658, Dev Acc=0.8905, Dev MCC=0.1776
+  -> New best Dev MCC: 0.1776
+Epoch 6: Loss=0.2956, Train Acc=0.9400, Train MCC=0.6713, Dev Acc=0.8996, Dev MCC=0.1986
+  -> New best Dev MCC: 0.1986
+Epoch 7: Loss=0.2380, Train Acc=0.9563, Train MCC=0.7663, Dev Acc=0.9050, Dev MCC=0.2045
+  -> New best Dev MCC: 0.2045
+Epoch 8: Loss=0.1857, Train Acc=0.9619, Train MCC=0.8065, Dev Acc=0.9042, Dev MCC=0.1947
+  -> No improvement in Dev MCC (1/5)
+Epoch 9: Loss=0.1485, Train Acc=0.9723, Train MCC=0.8487, Dev Acc=0.9056, Dev MCC=0.2283
+  -> New best Dev MCC: 0.2283
+Epoch 10: Loss=0.1177, Train Acc=0.9778, Train MCC=0.8755, Dev Acc=0.9071, Dev MCC=0.2303
+  -> New best Dev MCC: 0.2303
+Epoch 11: Loss=0.0952, Train Acc=0.9831, Train MCC=0.8979, Dev Acc=0.9033, Dev MCC=0.2281
+  -> No improvement in Dev MCC (1/5)
+Epoch 12: Loss=0.0756, Train Acc=0.9846, Train MCC=0.9110, Dev Acc=0.9051, Dev MCC=0.2417
+  -> New best Dev MCC: 0.2417
+Epoch 13: Loss=0.0627, Train Acc=0.9877, Train MCC=0.9354, Dev Acc=0.9046, Dev MCC=0.2348
+  -> No improvement in Dev MCC (1/5)
+Epoch 14: Loss=0.0483, Train Acc=0.9891, Train MCC=0.9394, Dev Acc=0.9070, Dev MCC=0.2351
+  -> No improvement in Dev MCC (2/5)
+Epoch 15: Loss=0.0395, Train Acc=0.9923, Train MCC=0.9482, Dev Acc=0.9074, Dev MCC=0.2385
+  -> No improvement in Dev MCC (3/5)
+Epoch 16: Loss=0.0335, Train Acc=0.9944, Train MCC=0.9603, Dev Acc=0.9083, Dev MCC=0.2216
+  -> No improvement in Dev MCC (4/5)
+Epoch 17: Loss=0.0290, Train Acc=0.9951, Train MCC=0.9669, Dev Acc=0.9109, Dev MCC=0.2164
+  -> No improvement in Dev MCC (5/5)
+Early stopping triggered after 17 epochs.
+Restoring best model with Dev MCC=0.2417
+Training finished.
+The accuracy of the model is: 0.905
+Matthews Correlation Coefficient of the model is: 0.242
+/user/nirish.samant/u28445/.conda/envs/dnlp/lib/python3.10/site-packages/huggingface_hub/file_download.py:942: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Trial 8 Dev MCC = 0.2420 Dev Accuracy = 0.9050
+
+Running:
+python -u bart_detection.py --use_gpu --learning_rate 8.69505846856063e-06 --weight_decay 0.0005455607002122823 --dropout 0.254646105819614 --classifier_hidden_size 512 --warmup_ratio 0.10719338140152455 --batch_size 8 --epochs 20 --patience 5 --loss BCE --pooling mean --max_length 512 --seed 11711 --disable_tqdm
+Label matrix shape: (2730, 26)
+Train samples: 2179
+Dev samples: 551
+/user/nirish.samant/u28445/.conda/envs/dnlp/lib/python3.10/site-packages/huggingface_hub/file_download.py:942: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Loaded 2179 training samples.
+Epoch 1: Loss=0.6180, Train Acc=0.8691, Train MCC=0.0007, Dev Acc=0.6827, Dev MCC=0.0325
+  -> New best Dev MCC: 0.0325
+Epoch 2: Loss=0.5367, Train Acc=0.9064, Train MCC=0.0221, Dev Acc=0.8221, Dev MCC=0.0733
+  -> New best Dev MCC: 0.0733
+Epoch 3: Loss=0.5150, Train Acc=0.9086, Train MCC=0.0639, Dev Acc=0.8594, Dev MCC=0.1337
+  -> New best Dev MCC: 0.1337
+Epoch 4: Loss=0.4779, Train Acc=0.9115, Train MCC=0.1940, Dev Acc=0.8598, Dev MCC=0.1470
+  -> New best Dev MCC: 0.1470
+Epoch 5: Loss=0.4399, Train Acc=0.9146, Train MCC=0.3214, Dev Acc=0.8828, Dev MCC=0.1647
+  -> New best Dev MCC: 0.1647
+Epoch 6: Loss=0.4078, Train Acc=0.9203, Train MCC=0.4333, Dev Acc=0.8815, Dev MCC=0.1660
+  -> New best Dev MCC: 0.1660
+Epoch 7: Loss=0.3692, Train Acc=0.9241, Train MCC=0.5524, Dev Acc=0.8894, Dev MCC=0.1689
+  -> New best Dev MCC: 0.1689
+Epoch 8: Loss=0.3357, Train Acc=0.9331, Train MCC=0.6324, Dev Acc=0.8918, Dev MCC=0.1745
+  -> New best Dev MCC: 0.1745
+Epoch 9: Loss=0.3070, Train Acc=0.9383, Train MCC=0.6687, Dev Acc=0.8867, Dev MCC=0.1603
+  -> No improvement in Dev MCC (1/5)
+Epoch 10: Loss=0.2817, Train Acc=0.9401, Train MCC=0.6868, Dev Acc=0.8889, Dev MCC=0.1633
+  -> No improvement in Dev MCC (2/5)
+Epoch 11: Loss=0.2600, Train Acc=0.9471, Train MCC=0.7222, Dev Acc=0.8951, Dev MCC=0.1734
+  -> No improvement in Dev MCC (3/5)
+Epoch 12: Loss=0.2344, Train Acc=0.9487, Train MCC=0.7438, Dev Acc=0.8956, Dev MCC=0.1750
+  -> New best Dev MCC: 0.1750
+Epoch 13: Loss=0.2180, Train Acc=0.9536, Train MCC=0.7654, Dev Acc=0.8963, Dev MCC=0.1683
+  -> No improvement in Dev MCC (1/5)
+Epoch 14: Loss=0.2023, Train Acc=0.9547, Train MCC=0.7765, Dev Acc=0.8957, Dev MCC=0.1700
+  -> No improvement in Dev MCC (2/5)
+Epoch 15: Loss=0.1905, Train Acc=0.9594, Train MCC=0.7959, Dev Acc=0.8961, Dev MCC=0.1658
+  -> No improvement in Dev MCC (3/5)
+Epoch 16: Loss=0.1794, Train Acc=0.9626, Train MCC=0.8144, Dev Acc=0.8929, Dev MCC=0.1681
+  -> No improvement in Dev MCC (4/5)
+Epoch 17: Loss=0.1678, Train Acc=0.9655, Train MCC=0.8250, Dev Acc=0.8938, Dev MCC=0.1648
+  -> No improvement in Dev MCC (5/5)
+Early stopping triggered after 17 epochs.
+Restoring best model with Dev MCC=0.1750
+Training finished.
+The accuracy of the model is: 0.896
+Matthews Correlation Coefficient of the model is: 0.175
+/user/nirish.samant/u28445/.conda/envs/dnlp/lib/python3.10/site-packages/huggingface_hub/file_download.py:942: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Trial 9 Dev MCC = 0.1750 Dev Accuracy = 0.8960
+
+Running:
+python -u bart_detection.py --use_gpu --learning_rate 0.000374109554530686 --weight_decay 1.103521077305966e-05 --dropout 0.10620122493579276 --classifier_hidden_size 1024 --warmup_ratio 0.06357802201214365 --batch_size 4 --epochs 20 --patience 5 --loss BCE --pooling mean --max_length 512 --seed 11711 --disable_tqdm
+Label matrix shape: (2730, 26)
+Train samples: 2179
+Dev samples: 551
+/user/nirish.samant/u28445/.conda/envs/dnlp/lib/python3.10/site-packages/huggingface_hub/file_download.py:942: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Loaded 2179 training samples.
+Epoch 1: Loss=0.5567, Train Acc=0.9053, Train MCC=0.0000, Dev Acc=0.5169, Dev MCC=0.0175
+  -> New best Dev MCC: 0.0175
+Epoch 2: Loss=0.5420, Train Acc=0.9053, Train MCC=0.0000, Dev Acc=0.4377, Dev MCC=0.0031
+  -> No improvement in Dev MCC (1/5)
+Epoch 3: Loss=0.5353, Train Acc=0.9053, Train MCC=0.0000, Dev Acc=0.3740, Dev MCC=0.0052
+  -> No improvement in Dev MCC (2/5)
+Epoch 4: Loss=0.5335, Train Acc=0.9053, Train MCC=0.0000, Dev Acc=0.5632, Dev MCC=0.0076
+  -> No improvement in Dev MCC (3/5)
+Epoch 5: Loss=0.5319, Train Acc=0.9053, Train MCC=0.0000, Dev Acc=0.4428, Dev MCC=0.0045
+  -> No improvement in Dev MCC (4/5)
+Epoch 6: Loss=0.5312, Train Acc=0.9053, Train MCC=0.0000, Dev Acc=0.4929, Dev MCC=0.0130
+  -> No improvement in Dev MCC (5/5)
+Early stopping triggered after 6 epochs.
+Restoring best model with Dev MCC=0.0175
+Training finished.
+The accuracy of the model is: 0.517
+Matthews Correlation Coefficient of the model is: 0.017
+/user/nirish.samant/u28445/.conda/envs/dnlp/lib/python3.10/site-packages/huggingface_hub/file_download.py:942: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Trial 10 Dev MCC = 0.0170 Dev Accuracy = 0.5170
+
+Running:
+python -u bart_detection.py --use_gpu --learning_rate 9.702509231180292e-05 --weight_decay 0.009509260708868737 --dropout 0.1736173373703793 --classifier_hidden_size 1024 --warmup_ratio 0.1999409148820344 --batch_size 8 --epochs 20 --patience 5 --loss BCE --pooling mean --max_length 512 --seed 11711 --disable_tqdm
+Label matrix shape: (2730, 26)
+Train samples: 2179
+Dev samples: 551
+/user/nirish.samant/u28445/.conda/envs/dnlp/lib/python3.10/site-packages/huggingface_hub/file_download.py:942: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Loaded 2179 training samples.
+Epoch 1: Loss=0.5648, Train Acc=0.9060, Train MCC=0.0333, Dev Acc=0.7645, Dev MCC=0.1004
+  -> New best Dev MCC: 0.1004
+Epoch 2: Loss=0.5173, Train Acc=0.9038, Train MCC=0.0779, Dev Acc=0.8231, Dev MCC=0.1153
+  -> New best Dev MCC: 0.1153
+Epoch 3: Loss=0.4811, Train Acc=0.9041, Train MCC=0.2366, Dev Acc=0.8584, Dev MCC=0.1427
+  -> New best Dev MCC: 0.1427
+Epoch 4: Loss=0.4665, Train Acc=0.9053, Train MCC=0.0000, Dev Acc=0.4701, Dev MCC=-0.0019
+  -> No improvement in Dev MCC (1/5)
+Epoch 5: Loss=0.5360, Train Acc=0.9053, Train MCC=0.0000, Dev Acc=0.4436, Dev MCC=0.0150
+  -> No improvement in Dev MCC (2/5)
+Epoch 6: Loss=0.5325, Train Acc=0.9053, Train MCC=0.0000, Dev Acc=0.3556, Dev MCC=-0.0000
+  -> No improvement in Dev MCC (3/5)
+Epoch 7: Loss=0.5316, Train Acc=0.9053, Train MCC=0.0000, Dev Acc=0.3721, Dev MCC=0.0027
+  -> No improvement in Dev MCC (4/5)
+Epoch 8: Loss=0.5309, Train Acc=0.9053, Train MCC=0.0000, Dev Acc=0.3422, Dev MCC=0.0045
+  -> No improvement in Dev MCC (5/5)
+Early stopping triggered after 8 epochs.
+Restoring best model with Dev MCC=0.1427
+Training finished.
+The accuracy of the model is: 0.858
+Matthews Correlation Coefficient of the model is: 0.143
+/user/nirish.samant/u28445/.conda/envs/dnlp/lib/python3.10/site-packages/huggingface_hub/file_download.py:942: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Trial 11 Dev MCC = 0.1430 Dev Accuracy = 0.8580
+
+============================================================
+BEST TRIAL
+============================================================
+Best Dev MCC: 0.2540
+Dev Accuracy: 0.9080
+
+Best hyperparameters:
+learning_rate: 5.339632413082005e-05
+weight_decay: 0.00022766428584793658
+dropout: 0.19163350576094107
+classifier_hidden_size: 1024
+warmup_ratio: 0.11940831892257933
+batch_size: 8
+==========================================
+Job finished: Wed Sep  9 06:24:53 CEST 2026
+==========================================
+============ Job Information ===================================================
+Submitted: 2026-09-08T12:16:21
+Started: 2026-09-08T12:16:40
+Ended: 2026-09-09T06:24:53
+Elapsed: 1089 min, Limit: 2880 min, Difference: 1791 min
+CPUs: 8, Nodes: 1
+Estimated credit Consumption: 72.60 core-hours
+================================================================================

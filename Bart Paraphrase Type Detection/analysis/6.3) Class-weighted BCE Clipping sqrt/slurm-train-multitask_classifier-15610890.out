@@ -1,0 +1,175 @@
+Submitting job with sbatch from directory: /mnt/vast-nhr/home/nirish.samant/u28445/dnlp
+Home directory: /user/nirish.samant/u28445
+Working directory: /mnt/vast-nhr/home/nirish.samant/u28445/dnlp
+Current node: ggpu117
+Python 3.10.20
+Collecting environment information...
+PyTorch version: 2.2.0
+Is debug build: False
+CUDA used to build PyTorch: 12.1
+ROCM used to build PyTorch: N/A
+
+OS: Rocky Linux 8.10 (Green Obsidian) (x86_64)
+GCC version: (GCC) 8.5.0 20210514 (Red Hat 8.5.0-28)
+Clang version: Could not collect
+CMake version: version 3.26.5
+Libc version: glibc-2.28
+
+Python version: 3.10.20 | packaged by conda-forge | (main, Jun 11 2026, 03:31:56) [GCC 14.3.0] (64-bit runtime)
+Python platform: Linux-4.18.0-553.137.1.el8.g1.x86_64-x86_64-with-glibc2.28
+Is CUDA available: True
+CUDA runtime version: Could not collect
+CUDA_MODULE_LOADING set to: LAZY
+GPU models and configuration: GPU 0: NVIDIA A100-SXM4-40GB
+Nvidia driver version: 570.211.01
+cuDNN version: Could not collect
+HIP runtime version: N/A
+MIOpen runtime version: N/A
+Is XNNPACK available: True
+
+CPU:
+Architecture:        x86_64
+CPU op-mode(s):      32-bit, 64-bit
+Byte Order:          Little Endian
+CPU(s):              128
+On-line CPU(s) list: 0-127
+Thread(s) per core:  2
+Core(s) per socket:  32
+Socket(s):           2
+NUMA node(s):        2
+Vendor ID:           AuthenticAMD
+CPU family:          25
+Model:               1
+Model name:          AMD EPYC 7513 32-Core Processor
+Stepping:            1
+CPU MHz:             3214.275
+CPU max MHz:         3681.6399
+CPU min MHz:         1500.0000
+BogoMIPS:            5200.48
+Virtualization:      AMD-V
+L1d cache:           32K
+L1i cache:           32K
+L2 cache:            512K
+L3 cache:            32768K
+NUMA node0 CPU(s):   0-31,64-95
+NUMA node1 CPU(s):   32-63,96-127
+Flags:               fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl nonstop_tsc cpuid extd_apicid aperfmperf pni pclmulqdq monitor ssse3 fma cx16 pcid sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 invpcid_single hw_pstate ssbd mba ibrs ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local clzero irperf xsaveerptr wbnoinvd amd_ppin brs arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold v_vmsave_vmload vgif v_spec_ctrl umip pku ospke vaes vpclmulqdq rdpid overflow_recov succor smca fsrm
+
+Versions of relevant libraries:
+[pip3] numpy==1.26.4
+[pip3] torch==2.2.0
+[pip3] torchaudio==2.2.0
+[pip3] torchvision==0.17.0
+[pip3] triton==2.2.0
+[conda] blas                      2.108                       mkl    conda-forge
+[conda] blas-devel                3.9.0                     8_mkl    conda-forge
+[conda] libblas                   3.9.0                     8_mkl    conda-forge
+[conda] libcblas                  3.9.0                     8_mkl    conda-forge
+[conda] liblapack                 3.9.0                     8_mkl    conda-forge
+[conda] liblapacke                3.9.0                     8_mkl    conda-forge
+[conda] libopenvino-pytorch-frontend 2026.2.1             hecca717_1    conda-forge
+[conda] mkl                       2020.4             h726a3e6_304    conda-forge
+[conda] mkl-devel                 2020.4             ha770c72_305    conda-forge
+[conda] mkl-include               2020.4             h726a3e6_304    conda-forge
+[conda] numpy                     1.26.4          py310hb13e2d6_0    conda-forge
+[conda] pytorch                   2.2.0           py3.10_cuda12.1_cudnn8.9.2_0    pytorch
+[conda] pytorch-cuda              12.1                 ha16c6d3_6    pytorch
+[conda] pytorch-mutex             1.0                        cuda    pytorch
+[conda] torchaudio                2.2.0               py310_cu121    pytorch
+[conda] torchtriton               2.2.0                     py310    pytorch
+[conda] torchvision               0.17.0              py310_cu121    pytorch
+Label matrix shape: (2730, 26)
+Train samples: 2179
+Dev samples: 551
+Class  0: positive=293, negative=1886, weight=6.4369
+Class  1: positive=101, negative=2078, weight=20.5743
+Class  2: positive=99, negative=2080, weight=21.0101
+Class  3: positive=295, negative=1884, weight=6.3864
+Class  4: positive=383, negative=1796, weight=4.6893
+Class  5: positive=1402, negative=777, weight=0.5542
+Class  6: positive=253, negative=1926, weight=7.6126
+Class  7: positive=116, negative=2063, weight=17.7845
+Class  8: positive=2, negative=2177, weight=1088.5000
+Class  9: positive=6, negative=2173, weight=362.1667
+Class 10: positive=448, negative=1731, weight=3.8638
+Class 11: positive=22, negative=2157, weight=98.0455
+Class 12: positive=92, negative=2087, weight=22.6848
+Class 13: positive=10, negative=2169, weight=216.9000
+Class 14: positive=38, negative=2141, weight=56.3421
+Class 15: positive=27, negative=2152, weight=79.7037
+Class 16: positive=242, negative=1937, weight=8.0041
+Class 17: positive=427, negative=1752, weight=4.1030
+Class 18: positive=39, negative=2140, weight=54.8718
+Class 19: positive=174, negative=2005, weight=11.5230
+Class 20: positive=1677, negative=502, weight=0.2993
+Class 21: positive=417, negative=1762, weight=4.2254
+Class 22: positive=192, negative=1987, weight=10.3490
+Class 23: positive=2162, negative=17, weight=0.0079
+Class 24: positive=345, negative=1834, weight=5.3159
+Class 25: positive=48, negative=2131, weight=44.3958
+
+Class weights:
+Class  0: 2.5371
+Class  1: 4.5359
+Class  2: 4.5837
+Class  3: 2.5271
+Class  4: 2.1655
+Class  5: 0.7445
+Class  6: 2.7591
+Class  7: 4.2172
+Class  8: 32.9924
+Class  9: 19.0307
+Class 10: 1.9657
+Class 11: 9.9018
+Class 12: 4.7629
+Class 13: 14.7275
+Class 14: 7.5061
+Class 15: 8.9277
+Class 16: 2.8292
+Class 17: 2.0256
+Class 18: 7.4075
+Class 19: 3.3946
+Class 20: 0.5471
+Class 21: 2.0556
+Class 22: 3.2170
+Class 23: 0.0887
+Class 24: 2.3056
+Class 25: 6.6630
+Loaded 2179 training samples.
+Epoch 1: Loss=0.5918, Train Acc=0.9058, Train MCC=0.0144, Dev Acc=0.9062, Dev MCC=0.0137
+  -> New best Dev MCC: 0.0137
+Epoch 2: Loss=0.5313, Train Acc=0.9065, Train MCC=0.0466, Dev Acc=0.9066, Dev MCC=0.0443
+  -> New best Dev MCC: 0.0443
+Epoch 3: Loss=0.4941, Train Acc=0.9089, Train MCC=0.1970, Dev Acc=0.9051, Dev MCC=0.1445
+  -> New best Dev MCC: 0.1445
+Epoch 4: Loss=0.4282, Train Acc=0.9168, Train MCC=0.3919, Dev Acc=0.8986, Dev MCC=0.1810
+  -> New best Dev MCC: 0.1810
+Epoch 5: Loss=0.3485, Train Acc=0.9311, Train MCC=0.6043, Dev Acc=0.8961, Dev MCC=0.2122
+  -> New best Dev MCC: 0.2122
+Epoch 6: Loss=0.2881, Train Acc=0.9407, Train MCC=0.7076, Dev Acc=0.8917, Dev MCC=0.2161
+  -> New best Dev MCC: 0.2161
+Epoch 7: Loss=0.2302, Train Acc=0.9546, Train MCC=0.7890, Dev Acc=0.8920, Dev MCC=0.2169
+  -> New best Dev MCC: 0.2169
+Epoch 8: Loss=0.1843, Train Acc=0.9634, Train MCC=0.8158, Dev Acc=0.8919, Dev MCC=0.2246
+  -> New best Dev MCC: 0.2246
+Epoch 9: Loss=0.1473, Train Acc=0.9703, Train MCC=0.8584, Dev Acc=0.8884, Dev MCC=0.2247
+  -> New best Dev MCC: 0.2247
+Epoch 10: Loss=0.1200, Train Acc=0.9732, Train MCC=0.8695, Dev Acc=0.8918, Dev MCC=0.2374
+  -> New best Dev MCC: 0.2374
+Epoch 11: Loss=0.0960, Train Acc=0.9787, Train MCC=0.8872, Dev Acc=0.8918, Dev MCC=0.2289
+  -> No improvement in Dev MCC (1/2)
+Epoch 12: Loss=0.0796, Train Acc=0.9818, Train MCC=0.9044, Dev Acc=0.8923, Dev MCC=0.2221
+  -> No improvement in Dev MCC (2/2)
+Early stopping triggered after 12 epochs.
+Restoring best model with Dev MCC=0.2374
+Training finished.
+The accuracy of the model is: 0.892
+Matthews Correlation Coefficient of the model is: 0.237
+============ Job Information ===================================================
+Submitted: 2026-08-29T12:19:20
+Started: 2026-08-29T12:37:51
+Ended: 2026-08-29T13:30:03
+Elapsed: 53 min, Limit: 120 min, Difference: 67 min
+CPUs: 8, Nodes: 1
+Estimated credit Consumption: 132.50 core-hours
+================================================================================
